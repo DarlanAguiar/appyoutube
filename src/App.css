@@ -1,4 +1,5 @@
 .container{
+    
     max-width: 500px;
     margin: 30px auto;
     overflow: auto;
@@ -8,4 +9,10 @@
     border-radius: 10px;
 
 
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        width: 97vw;
+    }
 }
