@@ -29,23 +29,23 @@ const App = () => {
   ]);
 
    //executa quando as task forem alteradas (adicionada, removida), se o segundo parametro estiver vazio executa somente quando for renderizado(carregado a página).
-  useEffect(() => {
+  /* useEffect(() => {
     const fetchTasks = async () => {
       const response = await axios.get("https://jsonplaceholder.cypress.io/todos?_limit=10");
 
       const data = response.data;
-      console.log(data);
+     
 
       setTasks(data)
     }
 
     fetchTasks();
-  }, [] )
+  }, [] ) */
 
   const handleTaskClick = (taskId) => {
     
     const newTasks = tasks.map(task => {
-      if(task.id == taskId){
+      if(task.id === taskId){
         return {...task, completed: !task.completed}
       }else{
         return task
